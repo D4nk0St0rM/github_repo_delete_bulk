@@ -11,11 +11,7 @@
 ```
 cat repo.list | awk -F " | " '{print $1}' | awk -F "/" '{print $4,$5}' | sed 's/ /\//' | sed '1d;$d' > del.list
 
-while read repo;
-do 
-  curl -XDELETE -H 'Authorization: token xxx' "https://api.github.com/repos/$repo ";
-done 
-  < del.list
+for i in $(cat del.list); do curl -X DELETE -H "Authorization: token API_TOKEN" 'https://api.github.com/repos/'$i; done
 
 ```
 
