@@ -6,7 +6,7 @@
   - [Github Token Create](https://github.com/settings/tokens/new)  
 - Open all repos you wish to delete in seperate chrome tabs
 - Use OneTab to export tabs
-  - copy paste all URLs and titles of open tabs
+  - copy all URLs and titles of open tabs
   - vim repo.list / paste URLs & titles
 
 ```
