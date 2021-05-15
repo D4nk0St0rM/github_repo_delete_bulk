@@ -15,7 +15,7 @@ while read repo;
 do 
   curl -XDELETE -H 'Authorization: token xxx' "https://api.github.com/repos/$repo ";
 done 
-  < repos
+  < del.list
 
 ```
 
