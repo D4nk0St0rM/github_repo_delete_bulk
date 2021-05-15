@@ -10,7 +10,7 @@
   - vim repo.list / paste URLs & titles
 
 ```
-cat repo.list | awk -F " | " '{print $1}' | awk -F "/" '{print $4,$5}' | sed 's/ /\//' | sed '1d;$d' > del.list
+cat repo.list | awk -F " | " '{print $1}' | awk -F "/" '{print $4,$5}' | sed 's/ /\//' | sed '1d' > del.list
 
 for i in $(cat del.list); do curl -X DELETE -H "Authorization: token API_Key" 'https://api.github.com/repos/'$i; done
 
